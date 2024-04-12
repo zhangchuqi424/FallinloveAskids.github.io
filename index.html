@@ -49,7 +49,6 @@
     padding: 5px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 20px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     width:80px;
@@ -91,7 +90,9 @@
     animation: slideIn 30s ease; /* 使用动画 */
   }
 
-
+  .card{
+    pointer-events: none;
+}
   
 
 
@@ -100,8 +101,8 @@
 </head>
 
 <body>
-  <div id="border" class="div">
-    <div class="div">
+  <div id="border" class="div card">
+    <div class="div card">
   <header>
     <div style="margin-bottom: 300px;margin-top: 300px;">
     <h1 id="slide" style="font-size:100px;text-align: center;font-family:Tahoma, Geneva, sans-serif">Hello,World!</h1>
@@ -111,15 +112,19 @@
     </div>
   </header>
    
-  <main>
+ 
     <h2>首先还是蛮不好意思打扰你的，毕竟都快放假了</h2>
     <h2>但有些话我还是挺想说的</h2>
     <h2>所以下面有个省流版，但不建议看，因为挺苍白的😇</h2>
-    <a href="https://github.com/zhangchuqi424/FallinloveAskids.github.io/blob/main/p1.html" class="button" style="font-size:20px">省流版</a>
-    <a href="https://github.com/zhangchuqi424/FallinloveAskids.github.io/blob/main/p2.html" class="button" style="width: 100px;">碎碎念版</a>
-  </main>
+    
+ 
+      
     </div>
   </div>
-
+  
+  <div style="margin:50px">
+    <a href="p1.html" target="_blank" class="button" style="font-size:20px">省流版</a>
+  <a href="p2.html" target="_blank" class="button" style="width: 100px;">碎碎念版</a>
+  </div>
 </body>
 </html>
