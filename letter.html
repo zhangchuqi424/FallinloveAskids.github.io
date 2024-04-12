@@ -1,0 +1,125 @@
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="images/p1.jpg" />
+  <title> A letter</title>
+  <style>
+    body
+    {
+        width: 100%;
+        height: 100%;
+        background-color: lavenderblush;
+        color:DarkSalmon;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .div
+    {
+      margin:20px;
+    }
+    
+   #border
+   {
+      border-style: outset;
+      border-width: 10px;
+      border-color: LemonChiffon;
+      top:0;
+      left:0;
+      height:100%;
+      width: 100%;
+      position: relative;
+      z-index: -1;
+      border-bottom: none;
+      border-right: none;
+   }
+
+   .button
+   {
+    background-color:LightPink;
+    border-radius: 12px;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width:80px;
+    height:30px;
+   }
+  
+   /*按钮滑动效果*/
+   .hidden {
+    opacity: 0;
+    transform: translateY(50px); /* 初始位置 */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* 过渡效果 */
+  }
+  .visible {
+    opacity: 1;
+    transform: translateY(0); /* 滑动出现后的位置 */
+  }
+
+ /*自动滑动效果 */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px); 
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* 滑动出现后的位置 */
+    }
+  }
+
+  #slide {
+    animation: slideIn 3s ease; /* 使用动画 */
+  }
+
+  #slide1{
+    animation: slideIn 20s ease; /* 使用动画 */
+  }
+
+  #slide2{
+    animation: slideIn 30s ease; /* 使用动画 */
+  }
+
+
+  
+
+
+
+</style>
+</head>
+
+<body>
+  <div id="border" class="div">
+    <div class="div">
+  <header>
+    <div style="margin-bottom: 300px;margin-top: 300px;">
+    <h1 id="slide" style="font-size:100px;text-align: center;font-family:Tahoma, Geneva, sans-serif">Hello,World!</h1>
+    <h1 id="slide1" style="font-size: 75px;text-align: center;font-family:Tahoma, Geneva, sans-serif">抱歉乱入了，应该是</h1>
+    <h1 id="slide2" style="font-size: 80px;text-align: center;font-family:Tahoma, Geneva, sans-serif">好久不见，赵宸</h1>
+    <img style="margin-left: 80%;" src="c977cff058600640094cf8f1aeeaaaca.gif" alt="动画">
+    </div>
+  </header>
+   
+  <main>
+    <h2>首先还是蛮不好意思打扰你的，毕竟都快放假了</h2>
+    <h2>但有些话我还是挺想说的</h2>
+    <h2>所以下面有个省流版，但不建议看，因为挺苍白的😇</h2>
+    <a href="p1.html" class="button" style="font-size:20px">省流版</a>
+    <a href="p2.html" class="button" style="width: 100px;">碎碎念版</a>
+  </main>
+    </div>
+  </div>
+
+</body>
+</html>

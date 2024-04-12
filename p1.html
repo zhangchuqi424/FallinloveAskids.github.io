@@ -1,0 +1,176 @@
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="images/p1.jpg" />
+  <title> A letter</title>
+  <style>
+    body
+    {
+        width: 100%;
+        height: 100%;
+        background-color: lavenderblush;
+        color:DarkSalmon;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .div
+    {
+      margin:20px;
+    }
+    
+   #border
+   {
+      border-style: outset;
+      border-width: 10px;
+      border-color: LemonChiffon;
+      top:0;
+      left:0;
+      height:100%;
+      width: 100%;
+      position: relative;
+      z-index: -1;
+      border-bottom: none;
+      border-right: none;
+   }
+
+   .button
+   {
+    background-color:LightPink;
+    border-radius: 12px;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width:80px;
+    height:30px;
+   }
+  
+   /*按钮滑动效果*/
+   .hidden {
+    opacity: 0;
+    transform: translateY(50px); /* 初始位置 */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* 过渡效果 */
+  }
+  .visible {
+    opacity: 1;
+    transform: translateY(0); /* 滑动出现后的位置 */
+  }
+
+ /*自动滑动效果 */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px); 
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* 滑动出现后的位置 */
+    }
+  }
+
+  .floating-text {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    animation: slideIn 1s ease;
+  }
+  @keyframes appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* 逐字显示动画 */
+@keyframes appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* 每个字体的样式 */
+span {
+  display: inline; /* 每个字在同一行显示 */
+  opacity: 0; /* 初始不可见 */
+  animation: appear 0.5s forwards; /* 使用 appear 动画，持续 0.5 秒 */
+  letter-spacing:0cap; /* 控制字母之间的间距 */
+}
+
+span:nth-child(1) { animation-delay: 0.1s; }
+span:nth-child(2) { animation-delay: 0.2s; }
+span:nth-child(3) { animation-delay: 0.3s; }
+span:nth-child(4) { animation-delay: 0.4s; }
+span:nth-child(5) { animation-delay: 0.5s; }
+span:nth-child(6) { animation-delay: 0.6s; }
+span:nth-child(7) { animation-delay: 0.7s; }
+span:nth-child(8) { animation-delay: 0.8s; }
+span:nth-child(9) { animation-delay: 0.9s; }
+span:nth-child(10) { animation-delay: 1s; }
+span:nth-child(11) { animation-delay: 1.1s; }
+span:nth-child(12) { animation-delay: 1.2s; }
+
+
+  /* 文字掉落动画关键帧 */
+@keyframes drop {
+  0% { transform: translateY(-100%); opacity: 0; } /* 初始状态：向上移动并透明 */
+  100% { transform: translateY(0); opacity: 1; } /* 结束状态：不再移动并完全可见 */
+}
+
+/* 文字样式 */
+.text-drop {
+  font-weight: bold; /* 字体粗细 */
+  animation: drop 0.5s ease forwards; /* 使用 drop 动画 */
+}
+
+
+
+
+</style>
+</head>
+
+<body>
+  <div id="border" class="div">
+    <div class="div">
+  <header>
+    <h1 style="font-size: 100px;">是的这是省流版</h1>
+  </header>
+   
+  <main>
+    <p class="text-drop" style="color: DarkSeaGreen; font-size: 150px; margin-bottom: 0;">其实我就是想问！</p>
+    <img style="margin-left: 10%; margin-top: 0; margin-bottom: 0;" src="emo.gif" alt="动画">
+    <p style="font-size: 80px; color: DarkSeaGreen;font-weight: bold; margin-top: 0;">
+    <span class="appear">我</span>
+    <span class="appear">们</span>
+    <span class="appear">真</span>
+    <span class="appear">的</span>
+    <span class="appear">不</span>
+    <span class="appear">能</span>
+    <span class="appear">再</span>
+    <span class="appear">试</span>
+    <span class="appear">一</span>
+    <span class="appear">次</span>
+    <span class="appear">了</span>
+    <span class="appear">嘛</span>
+    </p>
+    <p>好吧，果然很苍白</p>
+    <P>所以说我觉得有必要听我展开一下（认真）</P>
+    <a href="p2.html" class="button" style="width: 100px;">碎碎念版</a>
+
+  </main>
+    </div>
+  </div>
+
+</body>
+</html>
